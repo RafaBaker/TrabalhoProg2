@@ -15,4 +15,10 @@ void imprimeUsuario(Usuario* user);
 
 void desalocaUsuario(Usuario* user);
 
+int comparaUsuarios(Usuario* u1, Usuario* u2);
+
+char* getCPFUser(Usuario* u);
+
+int comparaCPFUser(Ator* u, char* cpf);
+
 #endif

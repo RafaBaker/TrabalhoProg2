@@ -19,4 +19,11 @@ void desalocaAtor(Ator* a);
 
 void imprimeAtor(Ator* a);
 
+char* getCPFAtor(Ator* a);
+
+int comparaCPFAtor(Ator* a, char* cpf);
+
+int ehMesmoAtor(Ator* a1, Ator* a2);
+
+
 #endif

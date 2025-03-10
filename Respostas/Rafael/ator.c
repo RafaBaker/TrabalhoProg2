@@ -75,3 +75,18 @@ void imprimeAtor(Ator* a)
     printf("- Telefone: %s\n", a->telefone);
     printf("- Genero: %s\n", a->genero);
 }
+
+char* getCPFAtor(Ator* a)
+{
+    return a->cpf;
+}
+
+int comparaCPFAtor(Ator* a, char* cpf)
+{
+    return !(strcmp(getCPFAtor(a), cpf));
+}
+
+int ehMesmoAtor(Ator* a1, Ator* a2)
+{
+    return !strcmp(getCPFAtor(a1), getCPFAtor(a2));
+}

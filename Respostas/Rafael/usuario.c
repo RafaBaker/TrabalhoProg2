@@ -54,3 +54,18 @@ void desalocaUsuario(Usuario* user)
     }
     user = NULL;
 }
+
+int comparaUsuarios(Usuario* u1, Usuario* u2)
+{
+    return ehMesmoAtor(u1->ator, u2->ator);
+}
+
+char* getCPFUser(Usuario* u)
+{
+    return getCPFAtor(u->ator);
+}
+
+int comparaCPFUser(Ator* u, char* cpf)
+{
+    return comparaCPFAtor(getCPFUser(u), cpf);
+}

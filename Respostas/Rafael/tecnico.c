@@ -69,3 +69,8 @@ void desalocaTecnico(Tecnico* t)
     }
     t = NULL;
 }
+
+int comparaTecnicos(Tecnico* t1, Tecnico* t2)
+{
+    return ehMesmoAtor(t1->ator, t2->ator);
+}
