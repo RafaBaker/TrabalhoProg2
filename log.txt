@@ -18,12 +18,12 @@ CRIANDO O DIRETÓRIO DE RESULTADO PARA Rafael:
 CHECKANDO OS ARQUIVOS DO ALUNO:
  - Arquivo esperado 'Respostas/Rafael/fila.c' encontrado!
  - Arquivo esperado 'Respostas/Rafael/fila.h' encontrado!
- - Arquivo esperado 'Respostas/Rafael/main.c' não encontrado!
+ - Arquivo esperado 'Respostas/Rafael/main.c' encontrado!
  - Arquivo esperado 'Respostas/Rafael/software.c' encontrado!
  - Arquivo esperado 'Respostas/Rafael/software.h' encontrado!
  - Arquivo esperado 'Respostas/Rafael/ticket.c' encontrado!
  - Arquivo esperado 'Respostas/Rafael/ticket.h' encontrado!
- - Arquivos esperados enviados: Faltando!
+ - Arquivos esperados enviados: Ok!
 
 COPIANDO OS ARQUIVOS PARA A PASTA DE RESULTADO DO ALUNO:
  - Pasta main:
@@ -60,10 +60,34 @@ COPIANDO OS ARQUIVOS PARA A PASTA DE RESULTADO DO ALUNO:
  - Removendo o software.o do professor da pasta Resultados/Rafael/software
  - Copiando o Respostas/Rafael/software.c do aluno para a pasta Resultados/Rafael/software
  - Copiando Arquivos Extras do Aluno:
+ - Copiando Respostas/Rafael/ator.c para Resultados/Rafael/main
+ - Copiando Respostas/Rafael/ator.c para Resultados/Rafael/completo
+ - Copiando Respostas/Rafael/data.c para Resultados/Rafael/main
+ - Copiando Respostas/Rafael/data.c para Resultados/Rafael/completo
+ - Copiando Respostas/Rafael/manutencao.c para Resultados/Rafael/main
+ - Copiando Respostas/Rafael/manutencao.c para Resultados/Rafael/completo
  - Copiando Respostas/Rafael/outros.c para Resultados/Rafael/main
  - Copiando Respostas/Rafael/outros.c para Resultados/Rafael/completo
+ - Copiando Respostas/Rafael/tecnico.c para Resultados/Rafael/main
+ - Copiando Respostas/Rafael/tecnico.c para Resultados/Rafael/completo
+ - Copiando Respostas/Rafael/usuario.c para Resultados/Rafael/main
+ - Copiando Respostas/Rafael/usuario.c para Resultados/Rafael/completo
+ - Copiando Respostas/Rafael/vector.c para Resultados/Rafael/main
+ - Copiando Respostas/Rafael/vector.c para Resultados/Rafael/completo
+ - Copiando Respostas/Rafael/ator.h para Resultados/Rafael/main
+ - Copiando Respostas/Rafael/ator.h para Resultados/Rafael/completo
+ - Copiando Respostas/Rafael/data.h para Resultados/Rafael/main
+ - Copiando Respostas/Rafael/data.h para Resultados/Rafael/completo
+ - Copiando Respostas/Rafael/manutencao.h para Resultados/Rafael/main
+ - Copiando Respostas/Rafael/manutencao.h para Resultados/Rafael/completo
  - Copiando Respostas/Rafael/outros.h para Resultados/Rafael/main
  - Copiando Respostas/Rafael/outros.h para Resultados/Rafael/completo
+ - Copiando Respostas/Rafael/tecnico.h para Resultados/Rafael/main
+ - Copiando Respostas/Rafael/tecnico.h para Resultados/Rafael/completo
+ - Copiando Respostas/Rafael/usuario.h para Resultados/Rafael/main
+ - Copiando Respostas/Rafael/usuario.h para Resultados/Rafael/completo
+ - Copiando Respostas/Rafael/vector.h para Resultados/Rafael/main
+ - Copiando Respostas/Rafael/vector.h para Resultados/Rafael/completo
  - Arquivos copiados: ok!
 
 COMPILANDO OS ARQUIVOS NA PASTA DE RESULTADO DO ALUNO:
@@ -82,11 +106,11 @@ COMPILANDO OS ARQUIVOS NA PASTA DE RESULTADO DO ALUNO:
 LINKANDO OS ARQUIVOS COMPILADOS:
  - Pasta main:
  - Gerando o binário prog linkando com o(s) arquivo(s) main/*.o
- - Arquivos Linkados: Erro! Binário prog não gerado.
+ - Arquivos Linkados: Ok! Binário prog gerado com sucesso.
  - Arquivo de output gerado: Resultados/Rafael/main/result_linking.txt
  - Pasta completo:
  - Gerando o binário prog linkando com o(s) arquivo(s) completo/*.o
- - Arquivos Linkados: Erro! Binário prog não gerado.
+ - Arquivos Linkados: Ok! Binário prog gerado com sucesso.
  - Arquivo de output gerado: Resultados/Rafael/completo/result_linking.txt
  - Pasta fila:
  - Gerando o binário prog linkando com o(s) arquivo(s) fila/*.o
@@ -100,73 +124,88 @@ LINKANDO OS ARQUIVOS COMPILADOS:
  - Gerando o binário prog linkando com o(s) arquivo(s) software/*.o
  - Arquivos Linkados: Ok! Binário prog gerado com sucesso.
  - Arquivo de output gerado: Resultados/Rafael/software/result_linking.txt
- - Arquivos Linkados: Erro! 2 arquivos com erros de linkagem.
 
 EXECUTANDO O VALGRIND EM CADA CASO:
  - Pasta main / Caso 1:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Rafael/main/Casos/1/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 11, frees: 0, errors: 0 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta main / Caso 2:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Rafael/main/Casos/2/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 11, frees: 0, errors: 0 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta main / Caso 3:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Rafael/main/Casos/3/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 11, frees: 0, errors: 0 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta main / Caso 4:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Rafael/main/Casos/4/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 11, frees: 0, errors: 0 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta main / Caso 5:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Rafael/main/Casos/5/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 11, frees: 0, errors: 0 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta main / Caso 6:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Rafael/main/Casos/6/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 11, frees: 0, errors: 0 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta main / Caso 7:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Rafael/main/Casos/7/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 11, frees: 0, errors: 0 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta main / Caso 8:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Rafael/main/Casos/8/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 11, frees: 0, errors: 0 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Nota para a pasta main (máximo 7.50) - 0 de 80 - 0% de 7.50: 0.
  -----
  - Pasta completo / Caso 1:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Rafael/completo/Casos/1/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 11, frees: 0, errors: 0 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta completo / Caso 2:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Rafael/completo/Casos/2/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 11, frees: 0, errors: 0 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta completo / Caso 3:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Rafael/completo/Casos/3/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 11, frees: 0, errors: 0 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta completo / Caso 4:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Rafael/completo/Casos/4/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 11, frees: 0, errors: 0 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta completo / Caso 5:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Rafael/completo/Casos/5/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 11, frees: 0, errors: 0 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta completo / Caso 6:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Rafael/completo/Casos/6/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 11, frees: 0, errors: 0 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta completo / Caso 7:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Rafael/completo/Casos/7/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 11, frees: 0, errors: 0 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Pasta completo / Caso 8:
- - Valgrind: Incorreto! Verifique se o binário prog foi gerado corretamente. Ou se o Valgrind está instalado.
+ - Arquivo de output gerado: Resultados/Rafael/completo/Casos/8/result_valgrind.txt.
+ - Valgrind: Incorreto! allocs: 11, frees: 0, errors: 0 | Desconto do valgrind 50.00%
  - Resultado para o saida.txt: Incorreto! Peso: 0.0
  - Nota para o Caso (soma dos pesos): 0 (soma total) - 50.0% (desconto do valgrind) = 0 de 10 pontos.
  - Nota para a pasta completo (máximo 0.0) - 0 de 80 - 0% de 0.0: 0.
@@ -304,9 +343,9 @@ RESULTADOS FINAIS
 
 ----------------------------------------------------------------------------
 Aluno: Rafael
- - Arquivos Esperados Corretos: 6 de 7
+ - Arquivos Esperados Corretos: 7 de 7
  - Pastas Compiladas Corretamente: 5 de 5 
- - Pastas Linkadas Corretamente: 3 de 5
+ - Pastas Linkadas Corretamente: 5 de 5
  - Teste main
  - Resultados corretos: 0 de 8
  - Valgrinds corretos: 0 de 8

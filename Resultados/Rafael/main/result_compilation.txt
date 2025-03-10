@@ -1,0 +1,30 @@
+main.c: In function ‘main’:
+main.c:42:21: warning: implicit declaration of function ‘comparaTecnicos’ [-Wimplicit-function-declaration]
+   42 |                 if (comparaTecnicos(t, aux))
+      |                     ^~~~~~~~~~~~~~~
+main.c:78:19: warning: too many arguments for format [-Wformat-extra-args]
+   78 |             scanf("[^\n]", tipo);
+      |                   ^~~~~~~
+tecnico.c: In function ‘leTecnico’:
+tecnico.c:36:9: warning: unused variable ‘tempoTrabalhado’ [-Wunused-variable]
+   36 |     int tempoTrabalhado;
+      |         ^~~~~~~~~~~~~~~
+usuario.c: In function ‘comparaCPFUser’:
+usuario.c:70:38: warning: passing argument 1 of ‘getCPFUser’ from incompatible pointer type [-Wincompatible-pointer-types]
+   70 |     return comparaCPFAtor(getCPFUser(u), cpf);
+      |                                      ^
+      |                                      |
+      |                                      Ator *
+usuario.c:63:27: note: expected ‘Usuario *’ but argument is of type ‘Ator *’
+   63 | char* getCPFUser(Usuario* u)
+      |                  ~~~~~~~~~^
+usuario.c:70:27: warning: passing argument 1 of ‘comparaCPFAtor’ from incompatible pointer type [-Wincompatible-pointer-types]
+   70 |     return comparaCPFAtor(getCPFUser(u), cpf);
+      |                           ^~~~~~~~~~~~~
+      |                           |
+      |                           char *
+In file included from usuario.h:1,
+                 from usuario.c:6:
+ator.h:24:26: note: expected ‘Ator *’ but argument is of type ‘char *’
+   24 | int comparaCPFAtor(Ator* a, char* cpf);
+      |                    ~~~~~~^

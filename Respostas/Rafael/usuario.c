@@ -65,7 +65,12 @@ char* getCPFUser(Usuario* u)
     return getCPFAtor(u->ator);
 }
 
-int comparaCPFUser(Ator* u, char* cpf)
+int comparaCPFUser(Usuario* u, char* cpf)
 {
     return comparaCPFAtor(getCPFUser(u), cpf);
+}
+
+char* getSetorUser(Usuario* u)
+{
+    return u->setor;
 }

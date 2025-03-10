@@ -2,7 +2,7 @@
 #define _OUTROS_H
 
 #define MAX_TAM_DESC_OUTROS 500
-#define MAX_TAM_LOCAL 100
+#define MAX_TAM_LOCAL_OUTROS 100
 
 /**
  * Estrutura de um Ticket Outros contendo os parametros especificos de um ticket do tipo OUTROS
