@@ -1,34 +1,15 @@
-==37918== Memcheck, a memory error detector
-==37918== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==37918== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==37918== Command: Resultados/Rafael/completo/prog Resultados/Rafael/completo/Casos/1
-==37918== Parent PID: 37917
-==37918== 
-==37918== 
-==37918== Process terminating with default action of signal 6 (SIGABRT)
-==37918==    at 0x49109FC: __pthread_kill_implementation (pthread_kill.c:44)
-==37918==    by 0x49109FC: __pthread_kill_internal (pthread_kill.c:78)
-==37918==    by 0x49109FC: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
-==37918==    by 0x48BC475: raise (raise.c:26)
-==37918==    by 0x48A27F2: abort (abort.c:79)
-==37918==    by 0x4903676: __libc_message (libc_fatal.c:156)
-==37918==    by 0x49B0599: __fortify_fail (fortify_fail.c:26)
-==37918==    by 0x49B0565: __stack_chk_fail (stack_chk_fail.c:24)
-==37918==    by 0x10AC89: leTecnico (in /home/rrmatos/Documents/TrabalhoProg2/Resultados/Rafael/completo/prog)
-==37918==    by 0x10A0DE: main (in /home/rrmatos/Documents/TrabalhoProg2/Resultados/Rafael/completo/prog)
-==37918== 
-==37918== HEAP SUMMARY:
-==37918==     in use at exit: 4,696 bytes in 11 blocks
-==37918==   total heap usage: 11 allocs, 0 frees, 4,696 bytes allocated
-==37918== 
-==37918== LEAK SUMMARY:
-==37918==    definitely lost: 0 bytes in 0 blocks
-==37918==    indirectly lost: 0 bytes in 0 blocks
-==37918==      possibly lost: 0 bytes in 0 blocks
-==37918==    still reachable: 4,696 bytes in 11 blocks
-==37918==         suppressed: 0 bytes in 0 blocks
-==37918== Reachable blocks (those to which a pointer was found) are not shown.
-==37918== To see them, rerun with: --leak-check=full --show-leak-kinds=all
-==37918== 
-==37918== For lists of detected and suppressed errors, rerun with: -s
-==37918== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==25815== Memcheck, a memory error detector
+==25815== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==25815== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==25815== Command: Resultados/Rafael/completo/prog Resultados/Rafael/completo/Casos/1
+==25815== Parent PID: 25814
+==25815== 
+==25815== 
+==25815== HEAP SUMMARY:
+==25815==     in use at exit: 0 bytes in 0 blocks
+==25815==   total heap usage: 30 allocs, 30 frees, 9,920 bytes allocated
+==25815== 
+==25815== All heap blocks were freed -- no leaks are possible
+==25815== 
+==25815== For lists of detected and suppressed errors, rerun with: -s
+==25815== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

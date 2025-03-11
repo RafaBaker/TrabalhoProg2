@@ -31,7 +31,7 @@ Ator* leAtor()
 {
     char nome[MAX_TAM_NOME_ATOR];
     char cpf[MAX_TAM_CPF_ATOR];
-    Data* dtNasc = CriaData();
+    Data* dtNasc = NULL;
     char telefone[MAX_TAM_TELEFONE_ATOR];
     char genero[MAX_TAM_GENERO_ATOR];
 
@@ -41,7 +41,7 @@ Ator* leAtor()
     scanf("%[^\n]", cpf);
     scanf("%*c");
 
-    LeData(dtNasc);
+    dtNasc = LeData();
 
     scanf("%[^\n]", telefone);
     scanf("%*c");
@@ -81,6 +81,11 @@ char* getCPFAtor(Ator* a)
     return a->cpf;
 }
 
+char* getNomeAtor(Ator* a)
+{
+    return a->nome;
+}
+
 int comparaCPFAtor(Ator* a, char* cpf)
 {
     return !(strcmp(getCPFAtor(a), cpf));
@@ -89,4 +94,9 @@ int comparaCPFAtor(Ator* a, char* cpf)
 int ehMesmoAtor(Ator* a1, Ator* a2)
 {
     return !strcmp(getCPFAtor(a1), getCPFAtor(a2));
+}
+
+int getIdadeAtor(Ator* a, Data* dtRef)
+{
+    return CalculaIdadeData(a->dtNasc, dtRef);
 }

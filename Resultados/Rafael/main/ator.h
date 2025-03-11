@@ -21,9 +21,12 @@ void imprimeAtor(Ator* a);
 
 char* getCPFAtor(Ator* a);
 
+char* getNomeAtor(Ator* a);
+
 int comparaCPFAtor(Ator* a, char* cpf);
 
 int ehMesmoAtor(Ator* a1, Ator* a2);
 
+int getIdadeAtor(Ator* a, Data* dtRef);
 
 #endif

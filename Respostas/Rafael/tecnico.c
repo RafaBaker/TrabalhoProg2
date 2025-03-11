@@ -33,7 +33,6 @@ Tecnico* leTecnico()
     char area[MAX_TAM_AREA];
     int disponibilidade;
     float salario;
-    int tempoTrabalhado;
 
     scanf("%[^\n]", area);
     scanf("%*c");
@@ -46,31 +45,97 @@ Tecnico* leTecnico()
     return t;
 }
 
-void imprimeTecnico(Tecnico* t)
+void imprimeTecnico(void* t)
 {
-    imprimeAtor(t->ator);
+    Tecnico* tec = (Tecnico*)t;
+
+    imprimeAtor(tec->ator);
 
     // - Area de Atuacao: GERAL
     // - Salario: 2000.00
     // - Disponibilidade: 7h
     // - Tempo Trabalhado: 0h
-    printf("- Area de Atuacao: %s\n- Salario: %.2f\n- Disponibilidade: %dh\n- Tempo Trabalhado: %dh\n", t->area, t->salario, t->disponibilidade, t->tempoTrabalhado);
+    printf("- Area de Atuacao: %s\n- Salario: %.2f\n- Disponibilidade: %dh\n- Tempo Trabalhado: %dh\n", tec->area, tec->salario, tec->disponibilidade, tec->tempoTrabalhado);
 }
 
-void desalocaTecnico(Tecnico* t)
+void desalocaTecnico(void* t)
 {
     if (t)
     {
-        if (t->ator)
+        Tecnico* tec = (Tecnico*)t;
+        if (tec->ator)
         {
-            desalocaAtor(t->ator);
+            desalocaAtor(tec->ator);
         }
         free(t);
     }
     t = NULL;
 }
 
-int comparaTecnicos(Tecnico* t1, Tecnico* t2)
+int ehMesmoTecnico(Tecnico* t1, Tecnico* t2)
 {
     return ehMesmoAtor(t1->ator, t2->ator);
+}
+
+int getTempoTrabalhado(Tecnico* t)
+{
+    return t->tempoTrabalhado;
+}
+
+int getDisponibilidade(Tecnico* t)
+{
+    return t->disponibilidade;
+}
+
+int getIdadeTec(Tecnico* t, Data* dtRef)
+{
+    return getIdadeAtor(t->ator, dtRef);
+}
+
+char getAreaAtuacao(Tecnico* t)
+{
+    if (!strcmp(t->area, "GERAL"))
+        return 'G';
+
+    if (!strcmp(t->area, "TI"))
+    {
+        return 'T';
+    }
+}
+
+char* getNomeTecnico(Tecnico* t)
+{
+    return getNomeAtor(t->ator);
+}
+
+int numBytesTecnico()
+{
+    return sizeof(Tecnico);
+}
+
+void atribuiTicket(Tecnico* t, Ticket* ticket)
+{
+    t->disponibilidade -= getTempoEstimadoTicket(ticket);
+    t->tempoTrabalhado += getTempoEstimadoTicket(ticket);
+    finalizaTicket(ticket);
+}
+
+//Função que vai ser usado no qsort
+int comparaTecnicos(const void* t1, const void* t2)
+{
+    Tecnico* tec1 = *(Tecnico**)t1;
+    Tecnico* tec2 = *(Tecnico**)t2;
+
+    if (tec1->tempoTrabalhado > tec2->tempoTrabalhado)
+    {
+        return -1;
+    }
+    else if (tec1->tempoTrabalhado < tec2->tempoTrabalhado)
+    {
+        return 1;
+    }
+    else 
+    {
+        return strcmp(getNomeTecnico(tec1), getNomeTecnico(tec2));
+    }
 }

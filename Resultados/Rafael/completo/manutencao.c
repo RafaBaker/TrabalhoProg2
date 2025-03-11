@@ -17,7 +17,7 @@ Manutencao *criaManutencao(char *nome, char* estado, char *local)
     Manutencao* m = (Manutencao*)malloc(sizeof(Manutencao));
 
     strcpy(m->nome, nome);
-    strcpy(m->local, estado);
+    strcpy(m->estado, estado);
     strcpy(m->local, local);
     m->tempoEstimado = 0;
 
@@ -105,6 +105,6 @@ void desalocaManutencao(void *m)
 void notificaManutencao(void *dado)
 {
     Manutencao* m = (Manutencao*)dado;
-    printf("- Tipo: Manutencao\n- Nome do item: %s\n- Estado de conservacao: %s\n- Local: %s\n- Tempo Estimado: %dh\n", m->nome, m->estado, m->local, getTempoEstimadoManutencao(dado));
+    printf("- Tipo: Manutencao\n- Nome do item: %s\n- Estado de conservacao: %s\n- Local: %s\n- Tempo estimado: %dh\n", m->nome, m->estado, m->local, getTempoEstimadoManutencao(dado));
 }
 

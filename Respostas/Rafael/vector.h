@@ -54,4 +54,8 @@ int VectorSize(Vector *v);
 */
 void VectorDestroy(Vector *v, void (*destroy)(DataType));
 
+void VectorPrint(Vector *v, void (*imprime)(DataType));
+
+void VectorSort(Vector *v, int (*compare)(const void*, const void*));
+
 #endif

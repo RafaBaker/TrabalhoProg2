@@ -10,39 +10,37 @@ struct Data
 };
 
 /**
- * @brief Aloca dinamicamente uma estrutura do tipo Data, e a retorna.
- * Os campos dessa estrutura devem ser preenchidos inicialmente com -1.
- *
- * @return Data - Data "Vazia"
+ * @brief Lê uma data da entrada padrão.
+ * @return Um ponteiro para a data lida.
  */
-Data *CriaData()
+Data* LeData()
 {
-    Data *data = (Data *)malloc(sizeof(Data));
-    if (data != NULL)
-    {
-        data->ano = -1;
-        data->mes = -1;
-        data->dia = -1;
-        return data;
-    }
-    else
-    {
-        printf("Erro ao alocar data\n");
-        exit(0);
-    }
+    int dia, mes, ano;
+    scanf("%d/%d/%d", &dia, &mes, &ano);
+    scanf("%*c");
+
+    Data* d = CriaData(dia, mes, ano);
+
+    return d;
 }
 
 /**
- * @brief Lê o dia, mês e ano e armazena em uma estrutura Data alocada dinamicamente.
- *
- * @param data - Ponteiro para a estrutura onde os dados serão armazenados. Lembre-se: Não pode ter valor NULL.
+ * @brief Cria uma data com o dia, mês e ano fornecidos. Se a alocação falhar, o programa é encerrado.
+ * @param dia O dia da data.
+ * @param mes O mês da data.
+ * @param ano O ano da data.
+ * @return Um ponteiro para a data criada.
  */
-void LeData(Data *data)
+Data* CriaData(int dia, int mes, int ano)
 {
-    scanf("%d/%d/%d", &data->dia, &data->mes, &data->ano);
-    scanf("%*c");
-}
+    Data* d = (Data*)malloc(sizeof(Data));
+    
+    d->dia = dia;
+    d->mes = mes;
+    d->ano = ano;
 
+    return d;
+}
 /**
  * @brief Libera a memória alocada dinamicamente para uma estrutura do tipo Data, passada como parâmetro
  * @param data - Ponteiro para a estrutura onde os dados estão armazenados.
@@ -74,68 +72,6 @@ int VerificaDataValida(Data *data)
         return 0;
 
     return 1;
-}
-
-/**
- * @brief Imprime o mês de uma data em formato extenso.
- *
- * @param data Data cujo mês será impresso em formato extenso.
- */
-void ImprimeMesExtenso(Data *data)
-{
-    switch (data->mes)
-    {
-    case 1:
-        printf("Janeiro");
-        break;
-    case 2:
-        printf("Fevereiro");
-        break;
-    case 3:
-        printf("Março");
-        break;
-    case 4:
-        printf("Abril");
-        break;
-    case 5:
-        printf("Maio");
-        break;
-    case 6:
-        printf("Junho");
-        break;
-    case 7:
-        printf("Julho");
-        break;
-    case 8:
-        printf("Agosto");
-        break;
-    case 9:
-        printf("Setembro");
-        break;
-    case 10:
-        printf("Outubro");
-        break;
-    case 11:
-        printf("Novembro");
-        break;
-    case 12:
-        printf("Dezembro");
-        break;
-    default:
-        break;
-    }
-}
-
-/**
- * @brief Imprime uma data em formato extenso.
- *
- * @param data Data a ser impressa em formato extenso.
- */
-void ImprimeDataExtenso(Data *data)
-{
-    printf("%02d de ", data->dia);
-    ImprimeMesExtenso(data);
-    printf(" de %4d\n", data->ano);
 }
 
 void ImprimeData(Data* data)
@@ -270,4 +206,23 @@ int CalculaDiferencaDias(Data *data1, Data *data2)
         return dif+difAnos;
     }
 
+}
+
+int CalculaIdadeData(Data* nascimento, Data* diacalc)
+{
+    int idade = diacalc->ano - nascimento->ano;
+
+    if (diacalc->mes < nascimento->mes)
+    {
+        idade--;
+    }
+    else if (diacalc->mes == nascimento->mes)
+    {
+        if (diacalc->dia < nascimento->dia)
+        {
+            idade--;
+        }
+    }
+
+    return idade;
 }

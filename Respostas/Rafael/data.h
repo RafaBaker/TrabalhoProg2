@@ -4,19 +4,19 @@
 typedef struct Data Data;
 
 /**
- * @brief Aloca dinamicamente uma estrutura do tipo Data, e a retorna. 
- * Os campos dessa estrutura devem ser preenchidos inicialmente com -1.
- * 
- * @return Data - Data "Vazia"
+ * @brief Lê uma data da entrada padrão.
+ * @return Um ponteiro para a data lida.
  */
-Data* CriaData();
+Data* LeData();
 
 /**
- * @brief Lê o dia, mês e ano e armazena em uma estrutura Data alocada dinamicamente.
- * 
- * @param data - Ponteiro para a estrutura onde os dados serão armazenados. Lembre-se: Não pode ter valor NULL.
+ * @brief Cria uma data com o dia, mês e ano fornecidos. Se a alocação falhar, o programa é encerrado.
+ * @param dia O dia da data.
+ * @param mes O mês da data.
+ * @param ano O ano da data.
+ * @return Um ponteiro para a data criada.
  */
-void LeData(Data* data);
+Data* CriaData(int dia, int mes, int ano);
 
 /**
  * @brief Libera a memória alocada dinamicamente para uma estrutura do tipo Data, passada como parâmetro
@@ -32,19 +32,6 @@ void LiberaData(Data* data);
  */
 int VerificaDataValida(Data* data);
 
-/**
- * @brief Imprime o mês de uma data em formato extenso.
- * 
- * @param data Data cujo mês será impresso em formato extenso.
- */
-void ImprimeMesExtenso(Data* data);
-
-/**
- * @brief Imprime uma data em formato extenso.
- * 
- * @param data Data a ser impressa em formato extenso.
- */
-void ImprimeDataExtenso(Data* data);
 
 void ImprimeData(Data* data);
 
@@ -90,5 +77,13 @@ int CalculaDiasAteMes(Data* data);
  * @return int Número de dias entre as duas datas.
  */
 int CalculaDiferencaDias(Data* data1, Data* data2);
+
+/**
+ * @brief Calcula a idade de uma pessoa com base na data de nascimento e em uma data para calcular a idade.
+ * @param nascimento Um ponteiro para a data de nascimento da pessoa.
+ * @param diacalc Um ponteiro para a data para calcular a idade.
+ * @return A idade da pessoa.
+ */
+int CalculaIdadeData(Data* nascimento, Data* diacalc);
 
 #endif

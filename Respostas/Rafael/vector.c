@@ -118,3 +118,16 @@ void VectorDestroy(Vector *v, void (*destroy)(DataType))
     }
 }
 
+void VectorPrint(Vector *v, void (*imprime)(DataType))
+{
+    for (int i = 0; i < VectorSize(v); i++)
+    {
+        printf("--------------------\n");
+        imprime(VectorGet(v, i));
+    }
+}
+
+void VectorSort(Vector *v, int (*compare)(const void*, const void*))
+{
+    qsort(v->data, v->qtd, sizeof(void*), compare);
+}

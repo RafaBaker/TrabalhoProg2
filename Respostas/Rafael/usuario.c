@@ -30,32 +30,36 @@ Usuario* leUsuario()
     Ator* ator = leAtor();
 
     scanf("%[^\n]", setor);
+    scanf("%*c");
 
     Usuario* user = criaUsuario(ator, setor);
     return user;
 }
 
-void imprimeUsuario(Usuario* user)
+void imprimeUsuario(void* user)
 {
-    imprimeAtor(user->ator);
-    printf("- Setor: %s\n", user->setor);
-    printf("- Tickets solicitados: %d\n", user->qtdTickets);
+    Usuario* u = (Usuario*)user;
+
+    imprimeAtor(u->ator);
+    printf("- Setor: %s\n", u->setor);
+    printf("- Tickets solicitados: %d\n", u->qtdTickets);
 }
 
-void desalocaUsuario(Usuario* user)
+void desalocaUsuario(void* user)
 {
     if (user)
     {
-        if (user->ator)
+        Usuario* u = (Usuario*)user;
+        if (u->ator)
         {
-            desalocaAtor(user->ator);
+            desalocaAtor(u->ator);
         }
         free(user);
     }
     user = NULL;
 }
 
-int comparaUsuarios(Usuario* u1, Usuario* u2)
+int ehMesmoUsuario(Usuario* u1, Usuario* u2)
 {
     return ehMesmoAtor(u1->ator, u2->ator);
 }
@@ -67,10 +71,45 @@ char* getCPFUser(Usuario* u)
 
 int comparaCPFUser(Usuario* u, char* cpf)
 {
-    return comparaCPFAtor(getCPFUser(u), cpf);
+    return comparaCPFAtor(u->ator, cpf);
 }
 
 char* getSetorUser(Usuario* u)
 {
     return u->setor;
+}
+
+char* getNomeUser(Usuario* u)
+{
+    return getNomeAtor(u->ator);
+}
+
+int getIdadeUser(Usuario* u, Data* dtRef)
+{
+    return getIdadeAtor(u->ator, dtRef);
+}
+
+void aumentaTicketsUser(Usuario* u)
+{
+    u->qtdTickets++;
+}
+
+//Função que vai ser usado no qsort
+int comparaUsuarios(const void* u1, const void* u2)
+{
+    Usuario* user1 = *(Usuario**)u1;
+    Usuario* user2 = *(Usuario**)u2;
+
+    if (user1->qtdTickets > user2->qtdTickets)
+    {
+        return -1;
+    }
+    else if (user1->qtdTickets < user2->qtdTickets)
+    {
+        return 1;
+    }
+    else 
+    {
+        return strcmp(getNomeUser(user1), getNomeUser(user2));
+    }
 }
