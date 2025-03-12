@@ -286,8 +286,11 @@ int main(int argc, char const *argv[])
 
                 //int sizeArray = sizeof(Vector);
                 //qsort(vTec, VectorSize(vTec), numBytesTecnico(), comparaTecnicos);
-                VectorSort(vTec, comparaTecnicos);
-                VectorPrint(vTec, imprimeTecnico);
+                Vector* copia = VectorConstruct();
+                VectorCopy(vTec, copia);
+                VectorSort(copia, comparaTecnicos);
+                VectorPrint(copia, imprimeTecnico);
+                //VectorDestroy(copia, desalocaTecnico);
                 printf("-------------------------------\n\n");
             }
 

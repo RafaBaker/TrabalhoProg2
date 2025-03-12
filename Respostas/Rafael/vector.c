@@ -131,3 +131,15 @@ void VectorSort(Vector *v, int (*compare)(const void*, const void*))
 {
     qsort(v->data, v->qtd, sizeof(void*), compare);
 }
+
+void VectorCopy(Vector *src,  Vector* dest)
+{
+    dest->capacidade = src->capacidade;
+    dest->qtd = src->qtd;
+    
+    dest->data = realloc(dest->data, sizeof(DataType)*dest->capacidade);
+    for (int i = 0; i < dest->qtd; i++)
+    {
+        memcpy(dest->data[i], src->data[i], sizeof(DataType));
+    }
+}
