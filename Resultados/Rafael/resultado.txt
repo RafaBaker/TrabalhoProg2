@@ -2,12 +2,12 @@ Arquivos Esperados Corretos: 7 de 7
 Pastas Compiladas Corretamente: 5 de 5 
 Pastas Linkadas Corretamente: 5 de 5
 Teste main
-  - Resultados corretos: 7 de 8
-  - Valgrinds corretos: 7 de 8
-Nota de Rafael para o teste main: 6.52
+  - Resultados corretos: 8 de 8
+  - Valgrinds corretos: 8 de 8
+Nota de Rafael para o teste main: 7.50
 Teste completo
-  - Resultados corretos: 7 de 8
-  - Valgrinds corretos: 7 de 8
+  - Resultados corretos: 8 de 8
+  - Valgrinds corretos: 8 de 8
 Nota de Rafael para o teste completo: 0
 Teste fila
   - Resultados corretos: 8 de 8
@@ -21,5 +21,5 @@ Teste software
   - Resultados corretos: 8 de 8
   - Valgrinds corretos: 8 de 8
 Nota de Rafael para o teste software: .50
-Nota de Rafael: 0+(1.00)+(1.00)+(6.52)+(0)+(.50)
-Nota de Rafael: 9.02
+Nota de Rafael: 0+(1.00)+(1.00)+(7.50)+(0)+(.50)
+Nota de Rafael: 10.00

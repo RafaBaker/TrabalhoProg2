@@ -60,4 +60,6 @@ void VectorSort(Vector *v, int (*compare)(const void*, const void*));
 
 void VectorCopy(Vector *src,  Vector* dest);
 
+void VectorDestroyCopy(Vector *v);
+
 #endif

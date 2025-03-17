@@ -61,6 +61,7 @@ void desalocaAtor(Ator* a)
         {
             LiberaData(a->dtNasc);
         }
+        a->dtNasc = NULL;
         free(a);
     }
     a = NULL;

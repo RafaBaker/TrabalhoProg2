@@ -13,12 +13,16 @@
 #include "vector.h"
 
 #define MAX_TAMANHO_ACAO 20
+#define REF_DIA 18
+#define REF_MES 2
+#define REF_ANO 2025
 
 int main(int argc, char const *argv[])
 {
     char comando = '\0';
     Vector *vTec = VectorConstruct();
     Vector *vUser = VectorConstruct();
+    Vector *copia = VectorConstruct();
     // Vector *vTickets = VectorConstruct();
     Fila *f = criaFila();
     Tecnico *t = NULL;
@@ -36,7 +40,7 @@ int main(int argc, char const *argv[])
     int repetido = 0;
     int cadastro = 0;
 
-    Data *dtRef = CriaData(18, 2, 2025);
+    Data *dtRef = CriaData(REF_DIA, REF_MES, REF_ANO);
 
     while (1)
     {
@@ -286,7 +290,6 @@ int main(int argc, char const *argv[])
 
                 //int sizeArray = sizeof(Vector);
                 //qsort(vTec, VectorSize(vTec), numBytesTecnico(), comparaTecnicos);
-                Vector* copia = VectorConstruct();
                 VectorCopy(vTec, copia);
                 VectorSort(copia, comparaTecnicos);
                 VectorPrint(copia, imprimeTecnico);
@@ -300,8 +303,9 @@ int main(int argc, char const *argv[])
 
                 //int sizeArray = sizeof(Vector);
                 //qsort(vTec, VectorSize(vTec), numBytesTecnico(), comparaTecnicos);
-                VectorSort(vUser, comparaUsuarios);
-                VectorPrint(vUser, imprimeUsuario);
+                VectorCopy(vUser, copia);
+                VectorSort(copia, comparaUsuarios);
+                VectorPrint(copia, imprimeUsuario);
                 printf("-------------------------------\n\n");
             }
 
@@ -315,6 +319,7 @@ int main(int argc, char const *argv[])
 
     VectorDestroy(vTec, desalocaTecnico);
     VectorDestroy(vUser, desalocaUsuario);
+    VectorDestroyCopy(copia);
     desalocaFila(f);
     LiberaData(dtRef);
 

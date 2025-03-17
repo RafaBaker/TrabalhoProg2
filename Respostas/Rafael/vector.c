@@ -110,12 +110,15 @@ void VectorDestroy(Vector *v, void (*destroy)(DataType))
                 if (v->data[i])
                 {
                     destroy(((DataType*)v->data)[i]);
+                    v->data[i] = NULL;
                 }
             }
             free(v->data);
         }
+        v->data = NULL;
         free(v);
     }
+    v = NULL;
 }
 
 void VectorPrint(Vector *v, void (*imprime)(DataType))
@@ -127,9 +130,13 @@ void VectorPrint(Vector *v, void (*imprime)(DataType))
     }
 }
 
+//Função que ordena e libera o vetor logo em seguida
 void VectorSort(Vector *v, int (*compare)(const void*, const void*))
 {
     qsort(v->data, v->qtd, sizeof(void*), compare);
+
+    // free(v->data);
+    // free(v);
 }
 
 void VectorCopy(Vector *src,  Vector* dest)
@@ -140,6 +147,20 @@ void VectorCopy(Vector *src,  Vector* dest)
     dest->data = realloc(dest->data, sizeof(DataType)*dest->capacidade);
     for (int i = 0; i < dest->qtd; i++)
     {
-        memcpy(dest->data[i], src->data[i], sizeof(DataType));
+        dest->data[i] = VectorGet(src, i);
     }
+}
+
+void VectorDestroyCopy(Vector *v)
+{
+    if (v)
+    {
+        if (v->data)
+        {
+            free(v->data);
+        }
+        v->data = NULL;
+        free(v);
+    }
+    v = NULL;
 }

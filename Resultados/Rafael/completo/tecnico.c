@@ -67,6 +67,7 @@ void desalocaTecnico(void* t)
         {
             desalocaAtor(tec->ator);
         }
+        tec->ator = NULL;
         free(t);
     }
     t = NULL;
