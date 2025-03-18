@@ -54,12 +54,23 @@ int VectorSize(Vector *v);
 */
 void VectorDestroy(Vector *v, void (*destroy)(DataType));
 
+/// @brief Imprime todos os elementos do vetor
+/// @param v Ponteiro para o vetor
+/// @param imprime Função que imprime os elementos do vetor
 void VectorPrint(Vector *v, void (*imprime)(DataType));
 
+/// @brief Ordena todos os elementos do vetor
+/// @param v Ponteiro para o vetor
+/// @param compare Compara a função que imrpime os elementos do vetor
 void VectorSort(Vector *v, int (*compare)(const void*, const void*));
 
+/// @brief Copia os elementos de src para dest
+/// @param src Ponteiro para o vetor a ser copiado
+/// @param dest Ponteiro para o vetor que será destinado as informações
 void VectorCopy(Vector *src,  Vector* dest);
 
+/// @brief Desaloca um vetor de copia
+/// @param v Ponteiro para o vetor de copia
 void VectorDestroyCopy(Vector *v);
 
 #endif

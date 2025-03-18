@@ -19,6 +19,7 @@
 
 int main(int argc, char const *argv[])
 {
+    //Declaração de variáveis
     char comando = '\0';
     Vector *vTec = VectorConstruct();
     Vector *vUser = VectorConstruct();
@@ -32,23 +33,21 @@ int main(int argc, char const *argv[])
     Software *s = NULL;
     //Ticket *ticket = NULL;
     char *setor;
-
     char cpf[MAX_TAM_CPF];
     char tipo[15];
     char acao[MAX_TAMANHO_ACAO];
-
     int repetido = 0;
     int cadastro = 0;
-
     Data *dtRef = CriaData(REF_DIA, REF_MES, REF_ANO);
 
+
+    //Inicio do programa
     while (1)
     {
         repetido = 0;
         cadastro = 0;
 
         scanf("%c", &comando);
-        // printf("Comando? %c\n", comando);
         scanf("[^\n]");
         scanf("%*c");
 
