@@ -9,10 +9,6 @@ struct Data
     int ano;
 };
 
-/**
- * @brief Lê uma data da entrada padrão.
- * @return Um ponteiro para a data lida.
- */
 Data* LeData()
 {
     int dia, mes, ano;
@@ -24,13 +20,6 @@ Data* LeData()
     return d;
 }
 
-/**
- * @brief Cria uma data com o dia, mês e ano fornecidos. Se a alocação falhar, o programa é encerrado.
- * @param dia O dia da data.
- * @param mes O mês da data.
- * @param ano O ano da data.
- * @return Um ponteiro para a data criada.
- */
 Data* CriaData(int dia, int mes, int ano)
 {
     Data* d = (Data*)malloc(sizeof(Data));
@@ -41,10 +30,7 @@ Data* CriaData(int dia, int mes, int ano)
 
     return d;
 }
-/**
- * @brief Libera a memória alocada dinamicamente para uma estrutura do tipo Data, passada como parâmetro
- * @param data - Ponteiro para a estrutura onde os dados estão armazenados.
- */
+
 void LiberaData(Data *data)
 {
     if (data != NULL)
@@ -54,12 +40,6 @@ void LiberaData(Data *data)
     }
 }
 
-/**
- * @brief Verifica se uma data é válida.
- *
- * @param data Data a ser verificada.
- * @return int 1 se a data é válida, 0 caso contrário.
- */
 int VerificaDataValida(Data *data)
 {
     if (data->dia > 31)
@@ -79,23 +59,11 @@ void ImprimeData(Data* data)
     printf("%d/%d/%d\n", data->dia, data->mes, data->ano);
 }
 
-/**
- * @brief Verifica se um ano é bissexto.
- *
- * @param data Data cujo ano será verificado.
- * @return int 1 se o ano é bissexto, 0 caso contrário.
- */
 int VerificaBissexto(Data *data)
 {
     return (data->ano % 400 == 0) || ((data->ano % 4 == 0) && (data->ano % 100 != 0));
 }
 
-/**
- * @brief Retorna o número de dias de um determinado mês.
- *
- * @param data Data cujo mês terá o número de dias retornado.
- * @return int Número de dias do mês da data.
- */
 int NumeroDiasMes(Data *data)
 {
     if (data->mes == 2)
@@ -116,14 +84,6 @@ int NumeroDiasMes(Data *data)
         return 30;
 }
 
-/**
- * @brief Compara duas datas.
- *
- * @param data1 Primeira data a ser comparada.
- * @param data2 Segunda data a ser comparada.
- * @return int 1 se data1 é maior que data2, -1 se data1 é menor que data2, 0 se as datas são iguais.
- * A data ser maior significa que ela é mais recente.
- */
 int ComparaData(Data *data1, Data *data2)
 {
     if (data1->ano > data2->ano)
@@ -141,12 +101,6 @@ int ComparaData(Data *data1, Data *data2)
     return 0;
 }
 
-/**
- * @brief Calcula o número de dias até o início do mês de uma determinada data.
- *
- * @param data Data cujo número de dias até o início do mês será calculado.
- * @return int Número de dias até o início do mês da data.
- */
 int CalculaDiasAteMes(Data *data)
 {
     int i, dias, total = 0;
@@ -161,13 +115,6 @@ int CalculaDiasAteMes(Data *data)
     return total;
 }
 
-/**
- * @brief Calcula a diferença em dias entre duas datas.
- *
- * @param data1 Primeira data a ser comparada.
- * @param data2 Segunda data a ser comparada.
- * @return int Número de dias entre as duas datas.
- */
 int CalculaDiferencaDias(Data *data1, Data *data2)
 {
 
