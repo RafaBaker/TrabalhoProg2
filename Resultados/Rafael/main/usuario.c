@@ -5,7 +5,6 @@
 
 #include "usuario.h"
 
-
 struct Usuario
 {
     Ator* ator;
@@ -94,7 +93,6 @@ void aumentaTicketsUser(Usuario* u)
     u->qtdTickets++;
 }
 
-//Função que vai ser usado no qsort
 int comparaUsuarios(const void* u1, const void* u2)
 {
     Usuario* user1 = *(Usuario**)u1;

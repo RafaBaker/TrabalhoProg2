@@ -121,7 +121,6 @@ void atribuiTicket(Tecnico* t, Ticket* ticket)
     finalizaTicket(ticket);
 }
 
-//Função que vai ser usado no qsort
 int comparaTecnicos(const void* t1, const void* t2)
 {
     Tecnico* tec1 = *(Tecnico**)t1;

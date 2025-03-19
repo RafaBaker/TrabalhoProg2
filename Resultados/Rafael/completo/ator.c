@@ -14,13 +14,6 @@ struct Ator
     char genero[MAX_TAM_GENERO_ATOR];
 };
 
-/// @brief 
-/// @param nome 
-/// @param cpf 
-/// @param dtNasc 
-/// @param telefone 
-/// @param genero 
-/// @return 
 Ator* criaAtor(char* nome, char* cpf, Data* dtNasc, char* telefone, char* genero)
 {
     Ator* a = malloc(sizeof(Ator));

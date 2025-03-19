@@ -131,6 +131,21 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Valgrind: Ok! allocs: 31, frees: 31, errors: 0 | Desconto do valgrind: 0.0%
  - Resultado para o saida.txt: Ok! Peso: 10
  - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta main / Caso 10:
+ - Arquivo de output gerado: Resultados/Rafael/main/Casos/10/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 31, frees: 31, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta main / Caso 11:
+ - Arquivo de output gerado: Resultados/Rafael/main/Casos/11/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 62, frees: 62, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta main / Caso 12:
+ - Arquivo de output gerado: Resultados/Rafael/main/Casos/12/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 47, frees: 47, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
  - Pasta main / Caso 2:
  - Arquivo de output gerado: Resultados/Rafael/main/Casos/2/result_valgrind.txt.
  - Valgrind: Ok! allocs: 34, frees: 34, errors: 0 | Desconto do valgrind: 0.0%
@@ -166,11 +181,31 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Valgrind: Ok! allocs: 61, frees: 61, errors: 0 | Desconto do valgrind: 0.0%
  - Resultado para o saida.txt: Ok! Peso: 10
  - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
- - Nota para a pasta main (máximo 7.50) - 80.00 de 80 - 100.00% de 7.50: 7.50.
+ - Pasta main / Caso 9:
+ - Arquivo de output gerado: Resultados/Rafael/main/Casos/9/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 64, frees: 64, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Nota para a pasta main (máximo 7.50) - 120.00 de 120 - 100.00% de 7.50: 7.50.
  -----
  - Pasta completo / Caso 1:
  - Arquivo de output gerado: Resultados/Rafael/completo/Casos/1/result_valgrind.txt.
  - Valgrind: Ok! allocs: 32, frees: 32, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta completo / Caso 10:
+ - Arquivo de output gerado: Resultados/Rafael/completo/Casos/10/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 32, frees: 32, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta completo / Caso 11:
+ - Arquivo de output gerado: Resultados/Rafael/completo/Casos/11/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 58, frees: 58, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta completo / Caso 12:
+ - Arquivo de output gerado: Resultados/Rafael/completo/Casos/12/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 43, frees: 43, errors: 0 | Desconto do valgrind: 0.0%
  - Resultado para o saida.txt: Ok! Peso: 10
  - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
  - Pasta completo / Caso 2:
@@ -208,11 +243,31 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Valgrind: Ok! allocs: 57, frees: 57, errors: 0 | Desconto do valgrind: 0.0%
  - Resultado para o saida.txt: Ok! Peso: 10
  - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
- - Nota para a pasta completo (máximo 0.0) - 80.00 de 80 - 100.00% de 0.0: 0.
+ - Pasta completo / Caso 9:
+ - Arquivo de output gerado: Resultados/Rafael/completo/Casos/9/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 59, frees: 59, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Nota para a pasta completo (máximo 0.0) - 120.00 de 120 - 100.00% de 0.0: 0.
  -----
  - Pasta fila / Caso 1:
  - Arquivo de output gerado: Resultados/Rafael/fila/Casos/1/result_valgrind.txt.
  - Valgrind: Ok! allocs: 34, frees: 34, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta fila / Caso 10:
+ - Arquivo de output gerado: Resultados/Rafael/fila/Casos/10/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 32, frees: 32, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta fila / Caso 11:
+ - Arquivo de output gerado: Resultados/Rafael/fila/Casos/11/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 81, frees: 81, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta fila / Caso 12:
+ - Arquivo de output gerado: Resultados/Rafael/fila/Casos/12/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 47, frees: 47, errors: 0 | Desconto do valgrind: 0.0%
  - Resultado para o saida.txt: Ok! Peso: 10
  - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
  - Pasta fila / Caso 2:
@@ -250,11 +305,31 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Valgrind: Ok! allocs: 65, frees: 65, errors: 0 | Desconto do valgrind: 0.0%
  - Resultado para o saida.txt: Ok! Peso: 10
  - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
- - Nota para a pasta fila (máximo 1.00) - 80.00 de 80 - 100.00% de 1.00: 1.00.
+ - Pasta fila / Caso 9:
+ - Arquivo de output gerado: Resultados/Rafael/fila/Casos/9/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 66, frees: 66, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Nota para a pasta fila (máximo 1.00) - 120.00 de 120 - 100.00% de 1.00: 1.00.
  -----
  - Pasta ticket / Caso 1:
  - Arquivo de output gerado: Resultados/Rafael/ticket/Casos/1/result_valgrind.txt.
  - Valgrind: Ok! allocs: 33, frees: 33, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta ticket / Caso 10:
+ - Arquivo de output gerado: Resultados/Rafael/ticket/Casos/10/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 31, frees: 31, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta ticket / Caso 11:
+ - Arquivo de output gerado: Resultados/Rafael/ticket/Casos/11/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 85, frees: 85, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta ticket / Caso 12:
+ - Arquivo de output gerado: Resultados/Rafael/ticket/Casos/12/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 51, frees: 51, errors: 0 | Desconto do valgrind: 0.0%
  - Resultado para o saida.txt: Ok! Peso: 10
  - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
  - Pasta ticket / Caso 2:
@@ -292,11 +367,31 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Valgrind: Ok! allocs: 69, frees: 69, errors: 0 | Desconto do valgrind: 0.0%
  - Resultado para o saida.txt: Ok! Peso: 10
  - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
- - Nota para a pasta ticket (máximo 1.00) - 80.00 de 80 - 100.00% de 1.00: 1.00.
+ - Pasta ticket / Caso 9:
+ - Arquivo de output gerado: Resultados/Rafael/ticket/Casos/9/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 71, frees: 71, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Nota para a pasta ticket (máximo 1.00) - 120.00 de 120 - 100.00% de 1.00: 1.00.
  -----
  - Pasta software / Caso 1:
  - Arquivo de output gerado: Resultados/Rafael/software/Casos/1/result_valgrind.txt.
  - Valgrind: Ok! allocs: 33, frees: 33, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta software / Caso 10:
+ - Arquivo de output gerado: Resultados/Rafael/software/Casos/10/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 31, frees: 31, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta software / Caso 11:
+ - Arquivo de output gerado: Resultados/Rafael/software/Casos/11/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 85, frees: 85, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Pasta software / Caso 12:
+ - Arquivo de output gerado: Resultados/Rafael/software/Casos/12/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 51, frees: 51, errors: 0 | Desconto do valgrind: 0.0%
  - Resultado para o saida.txt: Ok! Peso: 10
  - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
  - Pasta software / Caso 2:
@@ -334,7 +429,12 @@ EXECUTANDO O VALGRIND EM CADA CASO:
  - Valgrind: Ok! allocs: 69, frees: 69, errors: 0 | Desconto do valgrind: 0.0%
  - Resultado para o saida.txt: Ok! Peso: 10
  - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
- - Nota para a pasta software (máximo 0.50) - 80.00 de 80 - 100.00% de 0.50: .50.
+ - Pasta software / Caso 9:
+ - Arquivo de output gerado: Resultados/Rafael/software/Casos/9/result_valgrind.txt.
+ - Valgrind: Ok! allocs: 71, frees: 71, errors: 0 | Desconto do valgrind: 0.0%
+ - Resultado para o saida.txt: Ok! Peso: 10
+ - Nota para o Caso (soma dos pesos): 10.0 (soma total) - 0% (desconto do valgrind) = 10.00 de 10 pontos.
+ - Nota para a pasta software (máximo 0.50) - 120.00 de 120 - 100.00% de 0.50: .50.
  -----
 
 #######################################
@@ -347,24 +447,24 @@ Aluno: Rafael
  - Pastas Compiladas Corretamente: 5 de 5 
  - Pastas Linkadas Corretamente: 5 de 5
  - Teste main
- - Resultados corretos: 8 de 8
- - Valgrinds corretos: 8 de 8
+ - Resultados corretos: 12 de 12
+ - Valgrinds corretos: 12 de 12
  - Nota de Rafael para o teste main: 7.50
  - Teste completo
- - Resultados corretos: 8 de 8
- - Valgrinds corretos: 8 de 8
+ - Resultados corretos: 12 de 12
+ - Valgrinds corretos: 12 de 12
  - Nota de Rafael para o teste completo: 0
  - Teste fila
- - Resultados corretos: 8 de 8
- - Valgrinds corretos: 8 de 8
+ - Resultados corretos: 12 de 12
+ - Valgrinds corretos: 12 de 12
  - Nota de Rafael para o teste fila: 1.00
  - Teste ticket
- - Resultados corretos: 8 de 8
- - Valgrinds corretos: 8 de 8
+ - Resultados corretos: 12 de 12
+ - Valgrinds corretos: 12 de 12
  - Nota de Rafael para o teste ticket: 1.00
  - Teste software
- - Resultados corretos: 8 de 8
- - Valgrinds corretos: 8 de 8
+ - Resultados corretos: 12 de 12
+ - Valgrinds corretos: 12 de 12
  - Nota de Rafael para o teste software: .50
  - Nota de Rafael: 0+(1.00)+(1.00)+(7.50)+(0)+(.50)
  - Nota de Rafael: 10.00

@@ -24,14 +24,12 @@ int main(int argc, char const *argv[])
     Vector *vTec = VectorConstruct();
     Vector *vUser = VectorConstruct();
     Vector *copia = VectorConstruct();
-    // Vector *vTickets = VectorConstruct();
     Fila *f = criaFila();
     Tecnico *t = NULL;
     Usuario *u = NULL;
     Outros *o = NULL;
     Manutencao *m = NULL;
     Software *s = NULL;
-    //Ticket *ticket = NULL;
     char *setor;
     char cpf[MAX_TAM_CPF];
     char tipo[15];
@@ -51,11 +49,13 @@ int main(int argc, char const *argv[])
         scanf("[^\n]");
         scanf("%*c");
 
+        //'F' finaliza o programa
         if (comando == 'F')
             break;
 
         switch (comando)
         {
+        //Cadastro de um técnico
         case 'T':
             t = leTecnico();
             for (int i = 0; i < VectorSize(vTec); i++)
@@ -74,6 +74,7 @@ int main(int argc, char const *argv[])
             }
             break;
 
+        //Cadastro de um usuário
         case 'U':
             u = leUsuario();
             for (int i = 0; i < VectorSize(vUser); i++)
@@ -92,7 +93,7 @@ int main(int argc, char const *argv[])
             }
 
             break;
-
+        //Cadastro de um ticket
         case 'A':
             scanf("%[^\n]", cpf);
             scanf("%*c");
@@ -112,6 +113,9 @@ int main(int argc, char const *argv[])
                 }
             }
 
+            //Atribuindo os tickets na fila (caso o cpf esteja cadastrado) dependendo do tipo do ticket
+            //Se o ticket não foi cadastrado, ele ja é desalocado.
+
             if (!strcmp(tipo, "OUTROS"))
             {
                 o = lerOutros();
@@ -124,8 +128,6 @@ int main(int argc, char const *argv[])
                 {
                     desalocaOutros(o);
                 }
-                // printf("Ticket (OUTROS) inserido com sucesso\n");
-                // notificaFila(f);
             }
             else if (!strcmp(tipo, "MANUTENCAO"))
             {
@@ -149,8 +151,6 @@ int main(int argc, char const *argv[])
                 {
                     desalocaManutencao(m);
                 }
-
-                // printf("Ticket (MANUTENCAO) inserido com sucesso\n");
             }
             else if (!strcmp(tipo, "SOFTWARE"))
             {
@@ -165,15 +165,16 @@ int main(int argc, char const *argv[])
                 {
                     desalocaSoftware(s);
                 }
-                // printf("Ticket (SOFTWARE) inserido com sucesso\n");
             }
 
             break;
 
+        //'Ação a ser executada'
         case 'E':
             scanf("%[^\n]", acao);
             scanf("%*c");
 
+            //Lista de usuários
             if (!strcmp(acao, "USUARIOS"))
             {
                 printf("----- BANCO DE USUARIOS -----\n");
@@ -182,6 +183,7 @@ int main(int argc, char const *argv[])
                 printf("\n");
             }
 
+            //Lista de técnicos
             else if (!strcmp(acao, "TECNICOS"))
             {
                 printf("----- BANCO DE TECNICOS -----\n");
@@ -190,6 +192,7 @@ int main(int argc, char const *argv[])
                 printf("\n");
             }
 
+            //Distribuindo os tickets
             else if (!strcmp(acao, "DISTRIBUI"))
             {
 
@@ -201,6 +204,7 @@ int main(int argc, char const *argv[])
                     {
                         Ticket* ticket = getTicketNaFila(f, i);
                         char tipo = getTipoTicket(ticket);
+                        //Atribuindo o ticket a um técnico (a depender do tipo dele)
                         if (tipo == 'S')
                         {
                             for (int j = 0; j < VectorSize(vTec); j++)
@@ -211,6 +215,7 @@ int main(int argc, char const *argv[])
                                     if (getDisponibilidade(aux) >= getTempoEstimadoTicket(ticket))
                                     {
                                         atribuiTicket(aux, ticket);
+                                        //Reseta o indice caso ele chegue ao tamanho do vetor
                                         indice = (indice+1) % VectorSize(vTec);
                                         break;
                                     }
@@ -229,6 +234,7 @@ int main(int argc, char const *argv[])
                                     if (getDisponibilidade(aux) >= getTempoEstimadoTicket(ticket))
                                     {
                                         atribuiTicket(aux, ticket);
+                                        //Reseta o indice caso ele chegue ao tamanho do vetor
                                         indice = (indice+1) % VectorSize(vTec);
                                         break;
                                     }
@@ -251,7 +257,7 @@ int main(int argc, char const *argv[])
             {
                 printf("----- RELATORIO GERAL -----\n");
 
-                // pegando a soma das idades dos usuarios
+                // Pegando a soma das idades dos usuarios
                 int somaIdadeUser = 0;
                 for (int i = 0; i < VectorSize(vUser); i++)
                 {
@@ -259,7 +265,7 @@ int main(int argc, char const *argv[])
                 }
                 int mediaIdadeUser = somaIdadeUser / VectorSize(vUser);
 
-                // pegando a soma das idades dos tecnicos
+                // Pegando a soma das idades dos tecnicos
                 int somaIdadeTec = 0;
                 for (int i = 0; i < VectorSize(vTec); i++)
                 {
@@ -267,7 +273,7 @@ int main(int argc, char const *argv[])
                 }
                 int mediaIdadeTec = somaIdadeTec / VectorSize(vTec);
 
-                // pegando a quantidade de trabalhos dos tecnicos
+                // Pegando a quantidade de trabalhos dos tecnicos
                 int qtd = 0;
                 for (int i = 0; i < VectorSize(vTec); i++)
                 {
@@ -283,25 +289,20 @@ int main(int argc, char const *argv[])
                 printf("\n");
             }
 
+            //Ranking de técnicos
             else if (!strcmp(acao, "RANKING TECNICOS"))
             {
                 printf("----- RANKING DE TECNICOS -----\n");
-
-                //int sizeArray = sizeof(Vector);
-                //qsort(vTec, VectorSize(vTec), numBytesTecnico(), comparaTecnicos);
                 VectorCopy(vTec, copia);
                 VectorSort(copia, comparaTecnicos);
                 VectorPrint(copia, imprimeTecnico);
-                //VectorDestroy(copia, desalocaTecnico);
                 printf("-------------------------------\n\n");
             }
 
+            //Ranking de usuários
             else if (!strcmp(acao, "RANKING USUARIOS"))
             {
                 printf("----- RANKING DE USUARIOS -----\n");
-
-                //int sizeArray = sizeof(Vector);
-                //qsort(vTec, VectorSize(vTec), numBytesTecnico(), comparaTecnicos);
                 VectorCopy(vUser, copia);
                 VectorSort(copia, comparaUsuarios);
                 VectorPrint(copia, imprimeUsuario);
@@ -316,6 +317,7 @@ int main(int argc, char const *argv[])
         }
     }
 
+    //Desalocando todos os vetores e variáveis que foram alocados dinamicamente
     VectorDestroy(vTec, desalocaTecnico);
     VectorDestroy(vUser, desalocaUsuario);
     VectorDestroyCopy(copia);
